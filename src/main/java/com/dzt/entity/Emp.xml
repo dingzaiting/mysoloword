@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dzt.entity.Emp">
+
+<select id="selectEmpByEmpno" resultType="com.dzt.entity.Emp" parameterType="java.lang.Integer">
+	select empno,ename,job,sal,mgr,hiredate,comm from Emp
+	where empno=#{empno}
+</select>
+<select id="selectAllEmp" resultType="com.dzt.entity.Emp">
+	select empno,ename,job,sal,mgr,hiredate,comm from Emp
+</select>
+
+</mapper>
